@@ -83,8 +83,8 @@ def health():
     return jsonify({'status': 'healthy'}), 200
 
 if __name__ == '__main__':
-    # For development
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # For development - localhost only
+    app.run(debug=True, host='127.0.0.1', port=5000)
 else:
     # For production with Gunicorn
     app.run(host='0.0.0.0', port=5000)
